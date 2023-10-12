@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.dark{
+  background-color:rgb(3, 3, 31);
+  color: white;
+}
+
+.light{
+  background-color:white;
+  color: black;
+}
+
+.dark-btn{
+  background-color:rgb(3, 3, 31);
+  color: white;
+  border: 1px solid white;
+}
+
+.light-btn{
+  background-color:white;
+  color: black;
+  border: 1px solid black;
+}
+
+.validet{
+  color: red;
+}
