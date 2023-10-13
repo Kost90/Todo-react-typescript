@@ -1,0 +1,7 @@
+.task_container_parent{
+    @apply m-auto p-2 flex flex-col justify-start items-center min-h-screen gap-24;
+}
+
+.task_container_child{
+    @apply flex flex-col items-start justify-center text-base max-w-lg;
+}

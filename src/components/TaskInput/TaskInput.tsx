@@ -2,6 +2,7 @@ import { useState, useRef, memo, useCallback } from "react"
 import { useDispatch, useTasks } from "../context/Tasks";
 import { TASK_ACTION_TYPES } from "../../Types/interfaces";
 import { useTheme } from "../context/Theme";
+import styles from './TaskInput.module.css'
 
 const TaskInput = memo(() => {
 const [validate, setValidate] = useState(false)
@@ -29,9 +30,9 @@ const handelAddTodo = useCallback(() =>{
 },[tasks])
 
   return (
-    <div>
-        <input type="text" ref={inputRef} placeholder="Add new task" minLength={3}/>
-        <button onClick={handelAddTodo} className={theme?'dark-btn':'light-btn'}>Add Task</button>
+    <div className={styles.container_input}>
+        <input type="text" ref={inputRef} placeholder="Add new task" minLength={3} className={theme.theme === 'light' ?'dark_text_input':'light_text_input'}/>
+        <button onClick={handelAddTodo} className={theme.theme === 'light' ?'dark-btn':'light-btn'}>Add Task</button>
         {validate && <p className='validet'>Input must be at least 3 characters long</p>}
     </div>
   )

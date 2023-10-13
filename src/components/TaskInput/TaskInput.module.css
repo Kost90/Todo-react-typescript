@@ -1,0 +1,7 @@
+.container_input {
+  @apply m-auto p-1 min-w-max;
+}
+
+.add_input {
+  @apply border-sky-600 rounded-md border m-1 p-1 text-indigo-700;
+}/*# sourceMappingURL=TaskInput.module.css.map */
