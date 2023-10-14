@@ -4,6 +4,7 @@ import { useTasks } from "../context/Tasks";
 import { useTheme } from "../context/Theme";
 import { createTodos } from "../../Utils/Utils";
 import { ITodo } from "../../Types/interfaces";
+import styles from './TaskList.module.css'
 
 const TaskList = memo(() => {
   const tasks = useTasks();
@@ -13,7 +14,7 @@ const TaskList = memo(() => {
   console.log(tasks)
 
   return (
-    <ul className={theme}>
+    <ul className={`${theme} ${styles.container_tasklist}`}>
       {actualTodos.map((task) => (
         <Task key={task.id} task={task} />
       ))}

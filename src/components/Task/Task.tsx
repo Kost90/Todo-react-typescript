@@ -1,6 +1,8 @@
 import { memo, useState } from "react";
 import { useDispatch } from "../context/Tasks";
 import { TASK_ACTION_TYPES, TaskProps, ITodo } from "../../Types/interfaces";
+import styles from './Task.module.css'
+import { useTheme } from "../context/Theme";
 
 export interface ACTIONTYPE {
   type: TASK_ACTION_TYPES;
@@ -10,6 +12,7 @@ export interface ACTIONTYPE {
 const Task = memo(({ task }: TaskProps) => {
   const [isEditing, setIsEditing] = useState(false);
   const dispatch = useDispatch();
+  const theme = useTheme();
 
   const handelChangeDone = (e: React.FormEvent<HTMLInputElement>) => {
     dispatch({
@@ -55,23 +58,23 @@ const Task = memo(({ task }: TaskProps) => {
     taskContent = (
       <>
         <input value={task.text} onChange={handleEdit} />
-        <button onClick={hideForm}>Save</button>
+        <button onClick={hideForm} className={theme.theme === 'light' ?'dark-btn':'light-btn'}>Save</button>
       </>
     );
   } else {
     taskContent = (
       <>
         {task.text}
-        <button onClick={showForm}>Edit</button>
+        <button onClick={showForm} className={theme.theme === 'light' ?'dark-btn':'light-btn'}>Edit</button>
       </>
     );
   }
 
   return (
-    <div key={task.id}>
+    <div key={task.id} className={theme.theme === 'light' ?`${styles.container_task_dark}`:`${styles.container_task_light}`}>
       <input type="checkbox" checked={task?.done} onChange={handelChangeDone} />
       {taskContent}
-      <button onClick={handelDelete}>Delete</button>
+      <button onClick={handelDelete} className={theme.theme === 'light' ?'dark-btn':'light-btn'}>Delete</button>
     </div>
   );
 });

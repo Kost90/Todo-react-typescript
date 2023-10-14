@@ -1,0 +1,7 @@
+.container_task_dark {
+  @apply flex items-center gap-2 border-indigo-500 rounded-md border-2 p-2 w-96;
+}
+
+.container_task_light {
+  @apply flex items-center gap-2 border-blue-800 rounded-md border-2 p-2 w-96;
+}/*# sourceMappingURL=Task.module.css.map */

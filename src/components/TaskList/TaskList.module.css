@@ -1,0 +1,3 @@
+.container_tasklist {
+  @apply flex flex-col justify-center items-start gap-2;
+}/*# sourceMappingURL=TaskList.module.css.map */
