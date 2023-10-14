@@ -4,4 +4,8 @@
 
 .task_container_child {
   @apply flex flex-col items-start justify-center text-base max-w-lg;
+}
+
+.counter_tasks {
+  @apply uppercase text-xl;
 }/*# sourceMappingURL=TaskContainer.module.css.map */

@@ -1,7 +1,7 @@
 import { memo, useState } from "react";
 import { useDispatch } from "../context/Tasks";
 import { TASK_ACTION_TYPES, TaskProps, ITodo } from "../../Types/interfaces";
-import styles from './Task.module.css'
+import styles from "./Task.module.css";
 import { useTheme } from "../context/Theme";
 
 export interface ACTIONTYPE {
@@ -57,24 +57,50 @@ const Task = memo(({ task }: TaskProps) => {
   if (isEditing) {
     taskContent = (
       <>
-        <input value={task.text} onChange={handleEdit} />
-        <button onClick={hideForm} className={theme.theme === 'light' ?'dark-btn':'light-btn'}>Save</button>
+        <input
+          value={task.text}
+          onChange={handleEdit}
+          className={styles.edit_input}
+        />
+        <button
+          onClick={hideForm}
+          className={theme.theme === "light" ? "dark-btn" : "light-btn"}
+        >
+          Save
+        </button>
       </>
     );
   } else {
     taskContent = (
       <>
-        {task.text}
-        <button onClick={showForm} className={theme.theme === 'light' ?'dark-btn':'light-btn'}>Edit</button>
+        <span className="w-60 flex flex-wrap">{task.text}</span>
+        <button
+          onClick={showForm}
+          className={theme.theme === "light" ? "dark-btn" : "light-btn"}
+        >
+          Edit
+        </button>
       </>
     );
   }
 
   return (
-    <div key={task.id} className={theme.theme === 'light' ?`${styles.container_task_dark}`:`${styles.container_task_light}`}>
+    <div
+      key={task.id}
+      className={
+        theme.theme === "light"
+          ? `${styles.container_task_dark}`
+          : `${styles.container_task_light}`
+      }
+    >
       <input type="checkbox" checked={task?.done} onChange={handelChangeDone} />
       {taskContent}
-      <button onClick={handelDelete} className={theme.theme === 'light' ?'dark-btn':'light-btn'}>Delete</button>
+      <button
+        onClick={handelDelete}
+        className={theme.theme === "light" ? "dark-btn" : "light-btn"}
+      >
+        Delete
+      </button>
     </div>
   );
 });

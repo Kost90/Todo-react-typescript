@@ -9,19 +9,19 @@
 }
 
 .dark-btn {
-  @apply border-indigo-500 rounded-md border-2 m-1 p-2 text-blue-900 font-semibold;
+  @apply bg-indigo-500 rounded-md m-1 p-3 text-slate-100 text-xs font-semibold;
 }
 
 .dark_text_input {
-  @apply border-indigo-500 rounded-md border-2 m-1 p-3 text-blue-700 font-semibold w-96 placeholder:text-slate-400 text-xs;
+  @apply border-indigo-500 rounded-md border-2 m-1 p-3 text-blue-700 font-semibold w-80 placeholder:text-slate-400 text-xs;
 }
 
 .light-btn {
-  @apply border-blue-800 rounded-md border-2 m-1 p-2 text-slate-50 font-semibold;
+  @apply bg-sky-600 rounded-md m-1 p-2 text-slate-50 font-semibold;
 }
 
 .light_text_input {
-  @apply border-blue-800 rounded-md border-2 m-1 p-3 text-slate-900 font-semibold  w-96 placeholder:text-slate-900 text-xs;
+  @apply border-sky-600 rounded-md border-2 m-1 p-3 text-slate-900 font-semibold  w-80 placeholder:text-slate-900 text-xs;
 }
 
 .checkbox_container {

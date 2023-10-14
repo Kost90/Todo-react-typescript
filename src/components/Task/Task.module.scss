@@ -1,7 +1,11 @@
 .container_task_dark{
-    @apply flex items-center gap-2 border-indigo-500 rounded-md border-2 p-2 w-96;
+    @apply flex items-center gap-2 bg-sky-400 rounded-md p-2 max-w-fit;
 }
 
 .container_task_light{
-    @apply flex items-center gap-2 border-blue-800 rounded-md border-2 p-2 w-96;
+    @apply flex items-center gap-2 bg-blue-800 rounded-md p-2 max-w-fit;
+}
+
+.edit_input{
+    @apply p-1 text-neutral-500 rounded-sm;
 }
