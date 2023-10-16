@@ -73,7 +73,7 @@ const Task = memo(({ task }: TaskProps) => {
   } else {
     taskContent = (
       <>
-        <span className="w-60 flex flex-wrap">{task.text}</span>
+        <span className="w-40 sm:w-60 flex flex-wrap">{task.text}</span>
         <button
           onClick={showForm}
           className={theme.theme === "light" ? "dark-btn" : "light-btn"}

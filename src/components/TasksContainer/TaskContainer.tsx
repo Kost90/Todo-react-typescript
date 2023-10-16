@@ -32,8 +32,7 @@ function TaskContainer() {
       </div>
       <TaskList />
       <p className={styles.counter_tasks}>
-        You have <span className="text-blue-700 font-bold">{numTodo}</span>{" "}
-        tasks
+        You have <span className="text-blue-700 font-bold">{numTodo}</span> tasks
       </p>
     </div>
   );
